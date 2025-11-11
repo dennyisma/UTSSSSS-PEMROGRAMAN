@@ -4,23 +4,24 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:layout_margin="16sp"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- Header -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="24dp"
         android:text="Formulir Pendaftaran"
-        android:textColor="#FF5722"
+        android:textColor="#C12D2D"
+        android:textColorHint="#A01A1A"
+        android:textColorLink="#D52929"
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <!-- Username -->
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Username" />
@@ -31,10 +32,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Masukkan nama"
-        android:inputType="text"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:inputType="text" />
 
-    <!-- Email -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,47 +45,30 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:hint="Masukkan Email"
-        android:inputType="textEmailAddress"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:inputType="textEmailAddress" />
 
-    <!-- Nama Depan dan Belakang Label -->
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Depan                                 Nama Belakang" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="2"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="4dp">
+        android:layout_marginTop="8dp">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Nama Depan" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Nama Belakang" />
-    </LinearLayout>
-
-    <!-- Input Nama Depan dan Belakang -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_marginBottom="16dp">
 
         <EditText
             android:id="@+id/etNamaDepan"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Nama Depan"
-            android:textAllCaps="true"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:hint="Nama Depan"/>
 
         <Space
             android:layout_width="8dp"
@@ -97,27 +79,23 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Nama Belakang"
-            android:textAllCaps="true"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:hint="Nama Belakang"/>
 
     </LinearLayout>
 
-    <!-- Password -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password" />
 
     <EditText
-        android:id="@+id/editPassword"
+        android:id="@+id/editTextTextPassword2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:inputType="textPassword"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        android:ems="10"
+        android:inputType="textPassword" />
 
-    <!-- Konfirmasi Password -->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
@@ -125,31 +103,26 @@
         android:text="Ketik Ulang Password" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextTextPassword3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
         android:ems="10"
-        android:inputType="textPassword"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        android:inputType="textPassword" />
 
-    <!-- Tombol Kirim -->
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#4CAF50"
-        android:text="Kirim"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="8dp" />
-
-    <!-- Tombol Batal -->
     <Button
         android:id="@+id/btnCancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#E91E63"
+        android:backgroundTint="#1831AD"
+        android:text="Kirim"
+        android:textColorLink="#FB1717" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF5722"
         android:text="Batal"
-        android:textColor="#FFFFFF" />
+        android:textColorLink="#F44336" />
 
 </LinearLayout>
